@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Apertou muito o botão já:'),
+            const Text('Botão selecionado muitas vezes:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
