@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Imagem Astronômica do Dia'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -30,10 +30,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String? nome = '';
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      nome = 'João';
     });
   }
 
@@ -52,6 +54,12 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text('Botão selecionado muitas vezes:'),
             Text(
               '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            SizedBox(height: 30),
+            const Text('Nome:'),
+            Text(
+              (nome ?? "Visitante").toUpperCase(),
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
